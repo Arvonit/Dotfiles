@@ -8,4 +8,4 @@ fi
 
 echo 'Installing programms...\n'
 brew update
-brew brew/Brewfile
+brew bundle install --file brew/Brewfile
