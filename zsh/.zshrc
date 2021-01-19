@@ -48,3 +48,8 @@ alias ls="ls -F"
 alias ll="ls -l"
 # Only works if Dr Racket is installed
 # alias drracket="open /Applications/Racket\ v7.8/DrRacket.app"
+jdk() {
+    version=$1
+    export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+    java -version
+ }
