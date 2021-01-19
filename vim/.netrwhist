@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/arvind/Development/Projects/CSE1729/.git'
+let g:netrw_dirhist_2='/Users/arvind/.zsh'
+let g:netrw_dirhist_1='/Users/arvind/Development/Projects/Commentarium/Shared/Extensions'

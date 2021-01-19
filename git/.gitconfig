@@ -1,0 +1,5 @@
+[user]
+	name = Arvonit
+	email = me@arvind.dev
+[core]
+	autocrlf = input
