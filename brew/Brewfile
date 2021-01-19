@@ -4,16 +4,18 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "adoptopenjdk/openjdk"
 
-brew "mas"
+brew "python"
 brew "node"
+brew "mas"
 brew "pandoc"
 brew "rclone"
-brew "python"
 
 cask "1password"
+cask "adoptopenjdk11"
 cask "adoptopenjdk"
 cask "alfred"
 cask "anki"
+cask "appcode"
 cask "bartender"
 cask "calibre"
 cask "discord"
@@ -22,6 +24,7 @@ cask "google-chrome"
 cask "google-drive-file-stream"
 cask "intellij-idea"
 cask "datagrip"
+cask "iina"
 cask "istat-menus"
 cask "iterm2"
 cask "mactex-no-gui"
@@ -46,7 +49,5 @@ mas "Instapaper Save", id: 1481302432
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Trello", id: 1278508951
 mas "Ulysses", id: 1225570693
 mas "Xcode", id: 497799835
-mas "Reeder", id: 1449412482
