@@ -8,7 +8,8 @@ ln -sv vim/.vimrc ~
 ln -sv vim ~/.vim
 ln -sv zsh/.zshrc ~
 cp zsh/.hushlogin ~
-ln -sv git/.gitconfig ~
+# ln -sv git/.gitconfig ~
+# git config --global core.excludesfile git/.gitignore
 cp xcode/Custom\ Default\ (Dark).xccolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes
 # TODO: Make script out of Xcode plist using `defaults` API
 # cp xcode/com.apple.dt.Xcode.plist ~/Library/Perferences
