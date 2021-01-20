@@ -1,5 +1,5 @@
-# Add Cargo (Rust's package manager) to PATH
-# export PATH="$PATH:$HOME/.cargo/bin"
+# Add brew python to PATH
+export PATH="/usr/local/bin:$PATH"
 
 # Options
 setopt PROMPT_SUBST
@@ -40,16 +40,15 @@ DIRECTORY_SEGMENT="%K{blue}%F{$BRIGHT_WHITE} %~ %f%k"
 END_SEGMENT_SEPATATOR="%K{black}%F{blue}$SEGMENT_SEPARATOR%f%k"
 TOP="$USER_SEGMENT$START_SEGMENT_SEPARATOR$DIRECTORY_SEGMENT$END_SEGMENT_SEPATATOR$NEWLINE"
 BOTTOM="%F{blue}$ARROW%f "
-# Final Prompt
-PROMPT="$TOP$BOTTOM"
+PROMPT="$TOP$BOTTOM" # Final Prompt
 
 # Aliases
 alias ls="ls -F"
 alias ll="ls -l"
-# Only works if Dr Racket is installed
-# alias drracket="open /Applications/Racket\ v7.8/DrRacket.app"
+
+# Custom commands
 jdk() {
     version=$1
     export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
     java -version
- }
+}

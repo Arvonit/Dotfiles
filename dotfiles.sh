@@ -3,15 +3,13 @@
 echo $'Bootstrapping dotfiles...\n'
 
 # Symlink dotfiles to appropriate directories
-# TODO: Maybe redo vim symlink
-ln -sv vim/.vimrc ~
-ln -sv vim ~/.vim
-ln -sv zsh/.zshrc ~
-cp zsh/.hushlogin ~
-# ln -sv git/.gitconfig ~
-# git config --global core.excludesfile git/.gitignore
-cp xcode/Custom\ Default\ (Dark).xccolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes
-# TODO: Make script out of Xcode plist using `defaults` API
-# cp xcode/com.apple.dt.Xcode.plist ~/Library/Perferences
+# TODO: Prevent recursive symlinking
+ln -sv ~/.config/vim/.vimrc ~
+ln -sv ~/.config/vim ~/.vim
+ln -sv ~/.config/zsh/.zshrc ~
+cp ~/.config/zsh/.hushlogin ~
+
+# TODO: Check if FontAndColorThemes exists before copying
+cp "~/.config/xcode/Custom Default (Dark).xccolortheme" ~/Library/Developer/Xcode/UserData/FontAndColorThemes
 
 echo $'Configure iTerm 2 to read our preferences by going to Preferences > General > Preferences > Load preferences...\n'
