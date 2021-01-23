@@ -1,3 +1,5 @@
+" TODO: Replace with nvim configuration and symlink that instead
+
 " Allow copying and pasting to OS clipboard
 set clipboard=unnamed
 " Set tab equal to 4 spaces since I use that most often
