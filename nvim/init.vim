@@ -33,6 +33,17 @@ set tabstop=4
 set expandtab
 set shiftwidth=4
 
+" Map <C-j> to <esc> to make it easier to go to normal mode
+nnoremap <C-j> <Esc>
+inoremap <C-j> <Esc>
+vnoremap <C-j> <Esc>
+snoremap <C-j> <Esc>
+xnoremap <C-j> <Esc>
+cnoremap <C-j> <C-c>
+onoremap <C-j> <Esc>
+lnoremap <C-j> <Esc>
+tnoremap <C-j> <Esc>
+
 " Gruvbox theme
 colorscheme base16-gruvbox-dark-hard
 set termguicolors
