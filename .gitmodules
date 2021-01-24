@@ -1,9 +1,6 @@
 [submodule "iterm2/base16"]
 	path = iterm2/base16
 	url = https://github.com/martinlindhe/base16-iterm2
-[submodule "fish/base16"]
-	path = fish/base16
-	url = https://github.com/tomyun/base16-fish.git
 [submodule "tmux/base16"]
 	path = tmux/base16
 	url = https://github.com/mattdavis90/base16-tmux
