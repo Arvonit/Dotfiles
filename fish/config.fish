@@ -1,14 +1,6 @@
-# Convenience abbreviations
+# Abbreviations
+# alias : symlink :: abbreviation : textexpander
 abbr --add v nvim
-
-# Base 16 syntax highlighting
-# Not using it at the moment
-if status --is-interactive
-	if test -d ~/.config/fish/base16
-		set fish_function_path $fish_function_path ~/.config/fish/base16/functions
-		source ~/.config/fish/base16/conf.d/base16.fish
-	end
-end
 
 # Source autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
@@ -19,7 +11,25 @@ set -g fish_prompt_pwd_dir_length 0
 # Disable greeting at startup
 set fish_greeting
 
+# Set editor to Neovim
 set -gx EDITOR nvim
+
+# Custom syntax highlighting colors
+# - White for commands
+# - Yellow for subcommands
+# - Blue as accent color
+# - Green for quotes
+# - Red for errors
+set -U fish_color_autosuggestion brblack
+set -U fish_color_command brwhite
+set -U fish_color_comment brblack
+set -U fish_color_end blue # ; &&
+set -U fish_color_error red
+set -U fish_color_escape blue # \n
+set -U fish_color_operator yellow # () $i
+set -U fish_color_param yellow
+set -U fish_color_quote green
+set -U fish_color_redirection blue # > < 2>
 
 # Custom prompt
 # user@hostname pwd $ ...
