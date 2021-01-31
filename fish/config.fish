@@ -1,6 +1,8 @@
 # Abbreviations
 # alias : symlink :: abbreviation : textexpander
 abbr --add v nvim
+abbr --add z 'zsh -c'
+abbr --add p python3
 
 # Source autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish

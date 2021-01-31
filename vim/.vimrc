@@ -29,3 +29,14 @@ syntax on
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 " Set block cursor for normal mode
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+" Map <C-j> to <esc> to make it easier to go to normal mode
+nnoremap <C-j> <Esc>
+inoremap <C-j> <Esc>
+vnoremap <C-j> <Esc>
+snoremap <C-j> <Esc>
+xnoremap <C-j> <Esc>
+cnoremap <C-j> <C-c>
+onoremap <C-j> <Esc>
+lnoremap <C-j> <Esc>
+tnoremap <C-j> <Esc>

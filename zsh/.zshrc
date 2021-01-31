@@ -13,6 +13,6 @@ zstyle ':completion:*' expand prefix suffix
 PROMPT="%F{blue}%n%f@%F{blue}%m%f %F{yellow}%1~%f $ "
 
 # Aliases
-alias ls="ls -FG"
+alias ls="ls -FGh"
 alias ll="ls -l"
 alias la="ll -a"
