@@ -1,0 +1,6 @@
+# Ignore fish_variables
+fish/fish_variables
+
+# Ignore os-specific dotfiles
+htop
+neofetch
