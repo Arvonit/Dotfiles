@@ -7,6 +7,7 @@ echo $'Bootstrapping dotfiles...\n'
 ln -sv ~/.config/vim/.vimrc ~
 ln -sv ~/.config/vim ~/.vim
 ln -sv ~/.config/zsh/.zshrc ~
+ln -sv ~/.config/bash/.bashrc ~
 cp ~/.config/zsh/.hushlogin ~
 
 # TODO: Check if FontAndColorThemes exists before copying
