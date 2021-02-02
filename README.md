@@ -1,8 +1,9 @@
 # Dotfiles
 
-The dotfiles I use on my mac.
+The dotfiles I use across my computers.
 
-## Installation
+## Usage (for future me)
 
-When setting up a new install of macOS, clone this repository and place it in `~/.config`. Then run 
-`./install.sh` in the terminal.
+When setting up a new install of either macOS or Linux, clone this repository into `~/.config`. 
+Then run `./setup.sh`, which will install all of my programs, configure the OS, and bootstrap my
+dotfiles.
