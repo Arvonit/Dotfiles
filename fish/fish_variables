@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr_b:bash\x20\x2dc
 SETUVAR _fish_abbr_p:python3
 SETUVAR _fish_abbr_v:nvim
 SETUVAR _fish_abbr_z:zsh\x20\x2dc
