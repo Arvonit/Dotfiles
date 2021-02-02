@@ -1,6 +1,3 @@
-" Because fish is not POSIX compliant
-set shell=/bin/zsh
-
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
 
