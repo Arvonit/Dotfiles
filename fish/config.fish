@@ -35,18 +35,6 @@ set -U fish_color_param yellow
 set -U fish_color_quote green
 set -U fish_color_redirection blue # > < 2>
 
-# Jose Javier's colors (see [his dotfiles](https://github.com/JJGO/dotfiles/blob/master/terminal/.config/alacritty/alacritty.yml))
-# set -U fish_color_autosuggestion brblack
-# set -U fish_color_command green
-# set -U fish_color_comment brblack
-# set -U fish_color_end brblue # ; &&
-# set -U fish_color_error red
-# set -U fish_color_escape cyan # \n
-# set -U fish_color_operator brblue # () $i
-# set -U fish_color_param normal
-# set -U fish_color_quote yellow
-# set -U fish_color_redirection magenta # > < 2>
-
 # user@hostname pwd $ ...
 function fish_prompt
     # set_color normal
