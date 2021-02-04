@@ -4,8 +4,6 @@ echo $'Bootstrapping dotfiles...\n'
 
 # Symlink dotfiles to appropriate directories
 # TODO: Prevent recursive symlinking
-ln -sv ~/.config/vim/.vimrc ~
-ln -sv ~/.config/vim ~/.vim
 ln -sv ~/.config/zsh/.zshrc ~
 ln -sv ~/.config/bash/.bashrc ~
 cp ~/.config/zsh/.hushlogin ~
