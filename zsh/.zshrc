@@ -10,7 +10,7 @@ zstyle ':completion:*' expand prefix suffix
 
 # Custom prompt
 # username@hostname pwd $
-PROMPT="%F{blue}%n%f@%F{blue}%m%f %F{yellow}%1~%f $ "
+PROMPT="%F{yellow}%n%f@%F{blue}%m%f %F{green}%1~%f $ "
 
 # Aliases
 alias ls="ls -FGh"
