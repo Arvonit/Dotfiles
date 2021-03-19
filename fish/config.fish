@@ -4,6 +4,7 @@ abbr --add v nvim
 abbr --add z 'zsh -c'
 abbr --add b 'bash -c'
 abbr --add p python3
+abbr --add t 'tmux attach || tmux new'
 
 # TODO: Add if here and clean up set commands with correct flags
 # Source autojump
@@ -17,6 +18,10 @@ set fish_greeting
 
 # Set editor to Neovim
 set -gx EDITOR nvim
+
+# Set configuration folder to ~/.config
+# This is native to Linux, but some programs support it on macOS
+set -gx XDG_CONFIG_HOME ~/.config
 
 # Custom syntax highlighting colors
 # - White for commands
