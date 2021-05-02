@@ -1,1 +1,8 @@
+# Custom prompt
+# username@hostname pwd $
 PS1="\u@\h \W $ "
+
+# Aliases for `ls`
+alias ls="ls -FGh"
+alias ll="ls -l"
+alias la="ll -a"
