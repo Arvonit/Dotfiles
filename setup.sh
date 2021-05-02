@@ -2,12 +2,12 @@
 
 echo $'Welcome to the Dotfiles setup script!\n'
 
-if [[ "$OSNAME" == "darwin"* ]]; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
     echo $'You\'re using macOS!\n'
 
     source brew.sh
     source macOS.sh
-elif [[ "$OSNAME" == "linux-gnu"* ]]; then
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     echo $'You\'re using Linux!\n'
 
     # TODO: Create these scripts
