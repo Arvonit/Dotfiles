@@ -1,14 +1,19 @@
 # Abbreviations
 # alias : symlink :: abbreviation : textexpander
-abbr --add v nvim
-abbr --add z 'zsh -c'
-abbr --add b 'bash -c'
+abbr --add g git
+abbr --add l ls
 abbr --add p python3
+abbr --add v nvim
+# I rarely use this command and it conflicts with zoxide
+# abbr --add z 'zsh -c'
+abbr --add b 'bash -c'
 abbr --add t 'tmux attach || tmux new'
+abbr --add gst 'git status'
 
 # TODO: Add if here and clean up set commands with correct flags
-# Source autojump
-[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+
+# Source zoxide
+zoxide init fish | source
 
 # Disable directory shortening in `prompt_pwd`
 set -g fish_prompt_pwd_dir_length 0
