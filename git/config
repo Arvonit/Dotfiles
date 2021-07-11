@@ -3,3 +3,5 @@
 	email = me@arvind.dev
 [core]
 	autocrlf = input
+[init]
+	defaultBranch = main
