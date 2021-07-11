@@ -4,7 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'dag/vim-fish'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -66,9 +66,12 @@ nnoremap <Down> :echoe "Use j"<CR>
 " inoremap <Up> <ESC>:echoe "Use k"<CR>
 " inoremap <Down> <ESC>:echoe "Use j"<CR>
 
+" Clear search results with <C-l>
+nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
+
 " Gruvbox theme
 colorscheme base16-gruvbox-dark-hard
 set termguicolors
 
 " Configure COC
-source ~/.config/nvim/coc-config.vim
+" source ~/.config/nvim/coc-config.vim
