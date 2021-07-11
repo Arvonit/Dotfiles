@@ -9,6 +9,7 @@ abbr --add v nvim
 abbr --add b 'bash -c'
 abbr --add t 'tmux attach || tmux new'
 abbr --add gst 'git status'
+abbr --add gl 'git log --all --graph --decorate --oneline'
 
 # TODO: Add if here and clean up set commands with correct flags
 
