@@ -68,7 +68,7 @@ defaults write com.apple.dock minimize-to-application -bool true
 # Set the icon size of Dock items to 60 pixels
 defaults write com.apple.dock tilesize -int 60
 
-killall "Dock"
+killall Dock
 
 ####################################################################################################
 # Finder
@@ -101,7 +101,7 @@ defaults write NSGlobalDomain com.apple.springing.enabled -bool true
 # Show the ~/Library folder
 chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
 
-killall "Finder"
+killall Finder
 
 ####################################################################################################
 # Other Apps

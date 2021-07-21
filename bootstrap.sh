@@ -6,6 +6,7 @@ echo $'Bootstrapping dotfiles...\n'
 # TODO: Prevent recursive symlinking
 ln -sv ~/.config/zsh/zshrc ~/.zshrc
 ln -sv ~/.config/bash/bashrc ~/.bashrc
+ln -sv ~/.config/mail/mailrc ~/.mailrc
 cp ~/.config/zsh/hushlogin ~/.hushlogin
 
 # Symlink clangd to /usr/local/bin because I don't want to add all of LLVM To PATH

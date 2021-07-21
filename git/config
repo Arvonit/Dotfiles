@@ -5,3 +5,5 @@
 	autocrlf = input
 [init]
 	defaultBranch = main
+[merge]
+	tool = nvim -d

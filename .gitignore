@@ -1,5 +1,6 @@
 # Ignore local files
 fish/fish_variables
+fish/completions
 htop
 neofetch
 coc

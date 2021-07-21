@@ -6,7 +6,7 @@ if test !$(which brew); then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 
 fi
 
-echo 'Installing programms...\n'
+echo 'Installing programs...\n'
 brew update
 # TODO: Make sure Mac App Store is logged into before proceeding with `mas`
 brew bundle install --file brew/Brewfile
