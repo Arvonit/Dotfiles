@@ -4,10 +4,12 @@ abbr --add g git
 abbr --add l ls
 abbr --add p python3
 abbr --add v nvim
+abbr --add vim nvim
 abbr --add b 'bash -c'
 abbr --add t 'tmux attach || tmux new'
 abbr --add gst 'git status'
 abbr --add gl 'git log --all --graph --decorate --oneline'
+abbr --add clang 'clang -Wall -Wextra -Werror --std=c99'
 
 # TODO: Add if here and clean up set commands with correct flags
 
