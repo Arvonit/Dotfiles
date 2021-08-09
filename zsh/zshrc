@@ -16,3 +16,7 @@ PROMPT="%F{yellow}%n%f@%F{blue}%m%f %F{green}%1~%f $ "
 alias ls="ls -FGh"
 alias ll="ls -l"
 alias la="ll -a"
+alias grep="grep --color=auto"
+
+export EDITOR=nvim
+bindkey -e

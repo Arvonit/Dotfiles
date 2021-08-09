@@ -1,8 +1,16 @@
 # Custom prompt
 # username@hostname pwd $
-PS1="\u@\h \W $ "
+yellow=$(tput setaf 3)
+normal=$(tput sgr0)
+blue=$(tput setaf 4)
+green=$(tput setaf 2)
+PS1="\[$yellow\]\u\[$normal\]@\[$blue\]\h \[$green\]\W \[$normal\]$ "
 
-# Aliases for `ls`
+# Aliases
 alias ls="ls -FGh"
 alias ll="ls -l"
 alias la="ll -a"
+alias grep="grep --color=auto"
+
+export EDITOR=nvim
+set -o emacs
