@@ -1,0 +1,9 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": [
+        "c",
+        "cpp",
+        "rust"
+    ],
+    "coc.preferences.semanticTokensHighlights": false,
+    "clangd.semanticHighlighting": true
+}
