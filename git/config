@@ -5,5 +5,11 @@
 	autocrlf = input
 [init]
 	defaultBranch = main
+[diff]
+    tool = nvimdiff
+[difftool]
+	prompt = false
+[difftool "nvimdiff"]
+    cmd = nvim -d $LOCAL $REMOTE
 [merge]
 	tool = nvim -d
