@@ -13,6 +13,7 @@ Plug 'fnune/base16-vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-rsi' " Use readline/emacs shortcuts in insert mode and the command line
 Plug 'michaeljsmith/vim-indent-object'
 
 if !exists('vscode') && executable('node')
