@@ -9,9 +9,16 @@ abbr --add b 'bash -c'
 abbr --add t 'tmux attach || tmux new'
 abbr --add gst 'git status'
 abbr --add gl 'git log --all --graph --decorate --oneline'
-abbr --add clang 'clang -Wall -Wextra -Werror --std=c99'
+abbr --add ga 'git add'
+
+alias mv='mv -i'
+alias clang='clang -Wall -Werror --std=c99'
+alias rars='java -jar ~/Development/Projects/CSE3666/rars.jar'
 
 # TODO: Add if here and clean up set commands with correct flags
+
+# Add directories to PATH
+fish_add_path -gm ~/.local/bin
 
 # Enable zoxide
 zoxide init fish | source
@@ -32,8 +39,11 @@ set -gx XDG_CONFIG_HOME ~/.config
 # Disable less history 
 set -gx LESSHISTFILE /dev/null
 
-# Add directories to PATH
-fish_add_path ~/.local/bin
+# Add useful flags to less
+set -gx LESS '--quit-if-one-screen -R --mouse --ignore-case --tabs=4'
+
+# Use brew's less as the default pager since it supports mouse scrolling
+set -gx PAGER /usr/local/bin/less
 
 # TODO: See if these universal variables can be converted into global variables
 # Custom syntax highlighting colors
