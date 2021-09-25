@@ -12,8 +12,9 @@ abbr --add gl 'git log --all --graph --decorate --oneline'
 abbr --add ga 'git add'
 
 alias mv='mv -i'
-alias clang='clang -Wall -Werror --std=c99'
-alias rars='java -jar ~/Development/Projects/CSE3666/rars.jar'
+alias clang='clang -Wall -Werror -Wextra -Wno-unused-parameter -Wno-unused-variable --std=c99'
+alias rars='java -jar ~/Applications/RARS.jar'
+alias resource="source ~/.config/fish/config.fish"
 
 # TODO: Add if here and clean up set commands with correct flags
 
@@ -45,6 +46,9 @@ set -gx LESS '--quit-if-one-screen -R --mouse --ignore-case --tabs=4'
 # Use brew's less as the default pager since it supports mouse scrolling
 set -gx PAGER /usr/local/bin/less
 
+# Tell mandb where to look for man pages (same as /usr/bin/manpath)
+# set -gx MANPATH /usr/local/share/man /usr/share/man /Library/Apple/usr/share/man /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/share/man /Applications/Xcode.app/Contents/Developer/usr/share/man /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/share/man
+ 
 # TODO: See if these universal variables can be converted into global variables
 # Custom syntax highlighting colors
 # - Yellow for commands

@@ -7,7 +7,11 @@ green=$(tput setaf 2)
 PS1="\[$yellow\]\u\[$normal\]@\[$blue\]\h \[$green\]\W \[$normal\]$ "
 
 # Aliases
-alias ls="ls -FGh"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias ls="ls -FGh"
+elif [[ $OSTYPE == "linux-gnu"* ]]; then
+    alias ls="ls --color=auto -Fh"
+fi
 alias ll="ls -l"
 alias la="ll -a"
 alias grep="grep --color=auto"

@@ -24,6 +24,7 @@ Plug 'bfrg/vim-cpp-modern' " Better C/C++ syntax highlighting
 Plug 'jackguo380/vim-lsp-cxx-highlight' " C/C++ semantic highlighting from clangd
 Plug 'dag/vim-fish' " Syntax highlighting for fish script
 
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug 'chriskempson/base16-vim'
 " Plug 'gruvbox-community/gruvbox'
 " Plug 'neovim/nvim-lspconfig' 
@@ -38,6 +39,7 @@ call plug#end()
 " colorscheme gruvbox
 colorscheme base16-gruvbox-dark-hard
 hi CursorLineNr guifg=gui04 guibg=gui00
+hi link LspCxxHlGroupMemberVariable Normal
 set termguicolors
 
 " Map leader to space
@@ -87,6 +89,12 @@ set undofile
 
 " Disable Ex mode since I never intend to use it
 nmap Q <Nop>
+
+" Quick save
+nmap <leader>w :w<CR>
+
+" Make it easier to enter commands
+nmap ; :
 
 " Map Ctrl+j to Escape to make it easier to go to normal mode
 nnoremap <C-j> <Esc>
@@ -262,7 +270,7 @@ if !exists('g:vscode') && executable('node')
     " Show all diagnostics
     nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
     " Manage extensions
-    nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+    " nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
     " Show commands
     nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
     " Find symbol of current document
@@ -294,3 +302,20 @@ if !exists('g:vscode') && executable('node')
     " hi CocUnderline cterm=undercurl gui=undercurl 
     hi ErrorHighlight cterm=undercurl ctermfg=0 ctermbg=1 gui=undercurl guisp=#fb4934
 endif
+
+" Treesitter config
+" lua <<EOF
+" require'nvim-treesitter.configs'.setup {
+"   highlight = {
+"     enable = true,
+"     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+"     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+"     -- Using this option may slow down your editor, and you may see some duplicate highlights.
+"     -- Instead of true it can also be a list of languages
+"     additional_vim_regex_highlighting = false,
+"   },
+"   indent = {
+"     enable = true
+"   }
+" }
+" EOF
