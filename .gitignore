@@ -6,6 +6,12 @@ neofetch
 coc
 configstore
 gatsby
+raycast
+Amazon
 
 # Ignore iTerm's AppSupport folder
 iterm2/AppSupport
+
+# I was just testing these terminal emulators, but I don't want to check the config files in
+alacritty
+wezterm

@@ -31,11 +31,12 @@ port 465
 #tls_fingerprint 00:11:22:33:44:55:66:77:88:99:AA:BB:CC:DD:EE:FF:00:11:22:33
 
 # Envelope-from address
-from me@arvind.dev
+# from me@arvind.dev
+from notifications@arvind.dev
 
 # Authentication. The password is given using one of five methods, see below.
 auth on
-user me@arvind.dev
+user arvind@kasiliya.com
 
 # Fastmail doesn't use SMARTTLS, so let's disable it
 tls_starttls off
