@@ -2,7 +2,7 @@
 # alias : symlink :: abbreviation : textexpander
 abbr --add g git
 abbr --add l ls
-abbr --add p python3
+abbr --add p python
 abbr --add v nvim
 abbr --add vim nvim
 abbr --add b 'bash -c'
