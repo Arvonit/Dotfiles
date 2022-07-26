@@ -1,4 +1,4 @@
-# Dotfiles
+# dotfiles
 
 The dotfiles I use across my computers.
 
