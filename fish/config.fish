@@ -43,9 +43,6 @@ set -gx LESSHISTFILE /dev/null
 # Add useful flags to less
 set -gx LESS '-R --mouse --ignore-case --tabs=4'
 
-# Use brew's less as the default pager as it supports mouse scrolling
-set -gx PAGER '/usr/local/bin/less -is'
-
 # Custom syntax highlighting colors
 # - Yellow for commands
 # - White for subcommands
