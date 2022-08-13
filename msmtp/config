@@ -15,12 +15,12 @@ tls on
 #tls_trust_file /etc/ssl/certs/ca-certificates.crt
 
 # A freemail service
-account gmail
+account zoho
 
 # Host name of the SMTP server
-host smtp.gmail.com
+host smtp.zoho.com
 
-# Gmail SMTP port
+# Zoho SMTP port
 port 587
 
 # As an alternative to tls_trust_file, you can use tls_fingerprint
@@ -32,7 +32,7 @@ port 587
 
 # Authentication. The password is given using one of five methods, see below.
 auth on
-user arvind.kasiliya@gmail.com
+user arvind@kasiliya.com
 
 # Envelope-from address
 from notifications@kasiliya.com
@@ -42,4 +42,4 @@ from notifications@kasiliya.com
 # This is what we are using.
 
 # Set a default account
-account default : gmail
+account default : zoho
