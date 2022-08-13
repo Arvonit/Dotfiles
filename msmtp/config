@@ -15,13 +15,13 @@ tls on
 #tls_trust_file /etc/ssl/certs/ca-certificates.crt
 
 # A freemail service
-account fastmail
+account gmail
 
 # Host name of the SMTP server
-host smtp.fastmail.com
+host smtp.gmail.com
 
-# Fastmail SMTP port
-port 465
+# Gmail SMTP port
+port 587
 
 # As an alternative to tls_trust_file, you can use tls_fingerprint
 # to pin a single certificate. You have to update the fingerprint when the
@@ -30,20 +30,16 @@ port 465
 # $ msmtp --serverinfo --tls --tls-certcheck=off --host=smtp.freemail.example
 #tls_fingerprint 00:11:22:33:44:55:66:77:88:99:AA:BB:CC:DD:EE:FF:00:11:22:33
 
-# Envelope-from address
-# from me@arvind.dev
-from notifications@arvind.dev
-
 # Authentication. The password is given using one of five methods, see below.
 auth on
-user arvind@kasiliya.com
+user arvind.kasiliya@gmail.com
 
-# Fastmail doesn't use SMARTTLS, so let's disable it
-tls_starttls off
+# Envelope-from address
+from notifications@kasiliya.com
 
 # Password method 1: Add the password to the system keyring, and let msmtp get
 # it automatically.
 # This is what we are using.
 
 # Set a default account
-account default : fastmail
+account default : gmail
