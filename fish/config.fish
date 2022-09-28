@@ -40,8 +40,11 @@ set -gx XDG_CONFIG_HOME ~/.config
 # Disable less history 
 set -gx LESSHISTFILE /dev/null
 
-# Add useful flags to less
+# Add some useful flags to less
 set -gx LESS '-R --mouse --ignore-case --tabs=4'
+
+# Make GOPATH a hidden folder
+set -gx GOPATH ~/.go
 
 # Custom syntax highlighting colors
 # - Yellow for commands
