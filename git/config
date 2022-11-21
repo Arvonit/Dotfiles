@@ -3,6 +3,7 @@
 	email = arvind@kasiliya.com
 [core]
 	autocrlf = input
+    pager = less -F
 [init]
 	defaultBranch = main
 [diff]
