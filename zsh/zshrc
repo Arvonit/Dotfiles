@@ -13,10 +13,14 @@ zstyle ':completion:*' expand prefix suffix
 PROMPT="%F{yellow}%n%f@%F{blue}%m%f %F{green}%1~%f $ "
 
 # Aliases
-alias ls="ls -FGh"
+alias ls="ls --color=auto -Fh"
 alias ll="ls -l"
 alias la="ll -a"
 alias grep="grep --color=auto"
 
+# Set editor to neovim
 export EDITOR=nvim
+
+# Set emacs-style keybindings
+# This is the default, but zsh automatically sets vim-style keybindings when EDITOR is vim
 bindkey -e

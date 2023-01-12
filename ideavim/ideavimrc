@@ -1,33 +1,30 @@
+" Enable ideavim-specific plugins
+set ideajoin
+set commentary
+
 " Map <C-j> to <esc> to make it easier to go to normal mode
 nnoremap <C-j> <Esc>
 inoremap <C-j> <Esc>
 vnoremap <C-j> <Esc>
 snoremap <C-j> <Esc>
 xnoremap <C-j> <Esc>
-cnoremap <C-j> <C-c>
+cnoremap <C-j> <Esc>
 onoremap <C-j> <Esc>
 lnoremap <C-j> <Esc>
 tnoremap <C-j> <Esc>
 
-" Map <C-k> to <Esc> as well because sometimes <C-j> does not work (cough cough dialog box 
-" cough cough) 
-nnoremap <C-k> <Esc>
-inoremap <C-k> <Esc>
-vnoremap <C-k> <Esc>
-snoremap <C-k> <Esc>
-xnoremap <C-k> <Esc>
-cnoremap <C-k> <C-c>
-onoremap <C-k> <Esc>
-lnoremap <C-k> <Esc>
-tnoremap <C-k> <Esc>
+" Map leader to space
+let mapleader = ' '
 
-let mapleader="\<Space>"
-
-set ideajoin
-set commentary
-set easymotion
-set number
-" set relativenumber
+" Faster save shortcut (Space + w)
+nmap <leader>w :w<CR>
 
 " Disable Ex mode since I never intend to use it
 nmap Q <Nop>
+
+" Make it easier to enter commands
+nmap ; :
+
+" Disable error bell
+" (Visual bell is not implemented)
+set visualbell

@@ -11,19 +11,6 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'bfrg/vim-cpp-modern' " Better C/C++ syntax highlighting
 Plug 'dag/vim-fish' " Syntax highlighting for fish script
 
-" if !exists('vscode') && executable('node')
-"     Plug 'neoclide/coc.nvim', {'branch': 'release'} " VSCode-style autocomplete
-" endif
-
-" Plug 'jackguo380/vim-lsp-cxx-highlight' " C/C++ semantic highlighting from clangd
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-" Plug 'chriskempson/base16-vim'
-" Plug 'gruvbox-community/gruvbox'
-" Plug 'neovim/nvim-lspconfig' 
-" Use normal easymotion when in vim and patched easymotion when in vscode
-" Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
-" Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
-
 call plug#end()
 
 " Gruvbox theme
@@ -31,25 +18,6 @@ colorscheme base16-gruvbox-dark-hard
 hi CursorLineNr guifg=gui04 guibg=gui00
 hi link LspCxxHlGroupMemberVariable Normal
 set termguicolors
-
-" Map leader to space
-let mapleader = ' '
-
-" Map Ctrl+j to Escape to make it easier to go to normal mode
-if !exists('g:vscode')
-    " For some bizarre reason, having this enabled in the VSCode Neovim extension causes all sorts 
-    " of trouble with pasting text, and only when C-j is used as the keybinding. So, we won't 
-    " enable it in VSCode.
-    nnoremap <C-j> <Esc>
-    inoremap <C-j> <Esc>
-    vnoremap <C-j> <Esc>
-    snoremap <C-j> <Esc>
-    xnoremap <C-j> <Esc>
-    cnoremap <C-j> <C-c>
-    onoremap <C-j> <Esc>
-    lnoremap <C-j> <Esc>
-    tnoremap <C-j> <Esc>
-endif
 
 " Allow copying from and pasting to OS clipboard
 set clipboard=unnamed
@@ -93,14 +61,43 @@ set incsearch
 set undodir=~/.local/share/nvim/undo
 set undofile
 
-" Disable Ex mode since I never intend to use it
-nmap Q <Nop>
+" Change C comment string to double-slash (//)
+autocmd FileType c setlocal commentstring=//\ %s
+
+" Having a longer updatetime (default is 4000 ms) leads to noticeable delays and poor user 
+" experience, so we set it to a faster 300 ms
+set updatetime=300
+
+" Show signs and line numbers in the same column
+set signcolumn=number
+
+" Map leader to space
+let mapleader = ' '
 
 " Faster save shortcut (Space + w)
 nmap <leader>w :w<CR>
 
+" Disable Ex mode since I never intend to use it
+nmap Q <Nop>
+
 " Make it easier to enter commands
 nmap ; :
+
+" Map Ctrl+j to Escape to make it easier to go to normal mode
+if !exists('g:vscode')
+    " For some bizarre reason, having this enabled in the VSCode Neovim extension causes all sorts 
+    " of trouble with pasting text, and only when C-j is used as the keybinding. So, we won't 
+    " enable it in VSCode.
+    nnoremap <C-j> <Esc>
+    inoremap <C-j> <Esc>
+    vnoremap <C-j> <Esc>
+    snoremap <C-j> <Esc>
+    xnoremap <C-j> <Esc>
+    cnoremap <C-j> <C-c>
+    onoremap <C-j> <Esc>
+    lnoremap <C-j> <Esc>
+    tnoremap <C-j> <Esc>
+endif
 
 " Use vim-commentary keybindings for commenting in VSCode
 if exists('g:vscode')
@@ -116,20 +113,6 @@ nnoremap <Left> :echoe 'Use h'<CR>
 nnoremap <Right> :echoe 'Use l'<CR>
 nnoremap <Up> :echoe 'Use k'<CR>
 nnoremap <Down> :echoe 'Use j'<CR>
-" inoremap <Left> <ESC>:echoe 'Use h'<CR>
-" inoremap <Right> <ESC>:echoe 'Use l'<CR>
-" inoremap <Up> <ESC>:echoe 'Use k'<CR>
-" inoremap <Down> <ESC>:echoe 'Use j'<CR>
 
 " Clear search results with Ctrl + l
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
-
-" Change C comment string to double-slash (//)
-autocmd FileType c setlocal commentstring=//\ %s
-
-" Having a longer updatetime (default is 4000 ms) leads to noticeable delays and poor user 
-" experience, so we set it to a faster 300 ms
-set updatetime=300
-
-" Show signs and line numbers in the same column
-set signcolumn=number

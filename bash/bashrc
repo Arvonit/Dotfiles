@@ -7,14 +7,14 @@ green=$(tput setaf 2)
 PS1="\[$yellow\]\u\[$normal\]@\[$blue\]\h \[$green\]\W \[$normal\]$ "
 
 # Aliases
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    alias ls="ls -FGh"
-elif [[ $OSTYPE == "linux-gnu"* ]]; then
-    alias ls="ls --color=auto -Fh"
-fi
+alias ls="ls --color=auto -Fh"
 alias ll="ls -l"
 alias la="ll -a"
 alias grep="grep --color=auto"
 
+# Set editor to neovim
 export EDITOR=nvim
+
+# Set emacs-style keybindings
+# This is the default, but zsh automatically sets vim-style keybindings when EDITOR is vim
 set -o emacs

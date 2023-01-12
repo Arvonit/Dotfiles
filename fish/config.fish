@@ -13,10 +13,8 @@ abbr --add ga 'git add'
 abbr --add tree 'exa -T'
 
 alias mv='mv -i'
-alias clang='clang -Wall -Werror -Wextra -Wno-unused-parameter -Wno-unused-variable --std=c99'
-alias clang++='clang++ -Wall -Werror -Wextra -Wno-unused-parameter -Wno-unused-variable --std=c++20'
-# alias rars='java -jar ~/Applications/RARS.jar'
 alias resource='source ~/.config/fish/config.fish'
+alias chrome="open -a 'Google Chrome'"
 
 # Add directories to PATH
 fish_add_path -gm ~/.local/bin
