@@ -1,6 +1,7 @@
 [user]
 	name = Arvind
 	email = arvind@kasiliya.com
+	signingkey = 85BF2D67E514CCBF
 [core]
 	autocrlf = input
     pager = less -F
@@ -14,3 +15,5 @@
     cmd = nvim -d $LOCAL $REMOTE
 [merge]
 	tool = nvim -d
+[commit]
+	gpgsign = true
