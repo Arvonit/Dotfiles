@@ -1,5 +1,6 @@
 " Plugins
-call plug#begin('~/.local/share/nvim/plugged')
+" Use the command in the vim-plug repo to install: https://github.com/junegunn/vim-plug
+call plug#begin()
 
 Plug 'itchyny/lightline.vim'
 Plug 'fnune/base16-vim'
