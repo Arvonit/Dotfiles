@@ -1,22 +1,14 @@
-# Ignore local files
-fish/fish_variables
-fish/completions
+# Local files
 htop
 neofetch
-coc
-# configstore
-# gatsby
 raycast
-Amazon
-StardewValley
 github-copilot
 op
-# hammerspoon
-# karabiner
+fish/fish_variables
+fish/completions
 
-# This has a lot of internal configuration that shouldn't be synced
+# Stardew Valley stores its config and save data in ~/.config lol
+StardewValley
+
+# iTerm has a symlink to its config folder in ~/Library/Application Support :shrug:
 iterm2/AppSupport
-
-# I was just testing these terminal emulators, but I don't want to check the config files in
-# alacritty
-# wezterm
