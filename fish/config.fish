@@ -44,6 +44,9 @@ set -gx LESS '-R --mouse --ignore-case --tabs=4'
 # Make GOPATH a hidden folder
 set -gx GOPATH ~/.go
 
+# Set default vagrant provider to vmware
+set -gx VAGRANT_DEFAULT_PROVIDER vmware_desktop
+
 # Custom syntax highlighting colors
 # - Yellow for commands
 # - White for subcommands

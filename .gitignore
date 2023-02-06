@@ -4,19 +4,19 @@ fish/completions
 htop
 neofetch
 coc
-configstore
-gatsby
+# configstore
+# gatsby
 raycast
 Amazon
 StardewValley
 github-copilot
 op
-hammerspoon
-karabiner
+# hammerspoon
+# karabiner
 
 # This has a lot of internal configuration that shouldn't be synced
 iterm2/AppSupport
 
 # I was just testing these terminal emulators, but I don't want to check the config files in
-alacritty
-wezterm
+# alacritty
+# wezterm
