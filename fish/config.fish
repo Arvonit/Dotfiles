@@ -10,7 +10,6 @@ abbr --add t 'tmux attach || tmux new'
 abbr --add gst 'git status'
 abbr --add gl 'git log --all --graph --decorate --oneline'
 abbr --add ga 'git add'
-abbr --add tree 'exa -T'
 
 alias mv='mv -i'
 alias resource='source ~/.config/fish/config.fish'
