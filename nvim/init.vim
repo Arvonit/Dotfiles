@@ -18,7 +18,7 @@ call plug#end()
 colorscheme base16-gruvbox-dark-hard
 hi CursorLineNr guifg=gui04 guibg=gui00
 " Disable italics in comments
-" hi Comment cterm=none gui=none
+hi Comment cterm=none gui=none
 hi link LspCxxHlGroupMemberVariable Normal
 set termguicolors
 
