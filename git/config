@@ -1,10 +1,11 @@
 [user]
 	name = Arvind
 	email = arvind@kasiliya.com
-	signingkey = 85BF2D67E514CCBF
+    # signingkey = 85BF2D67E514CCBF
+	signingkey = FBAA205076BAB45B
 [core]
 	autocrlf = input
-    pager = less -F
+    pager = less -FX
 [init]
 	defaultBranch = main
 [diff]

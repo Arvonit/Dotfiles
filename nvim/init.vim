@@ -3,7 +3,7 @@
 call plug#begin()
 
 Plug 'itchyny/lightline.vim'
-Plug 'fnune/base16-vim'
+Plug 'tinted-theming/base16-vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -17,6 +17,8 @@ call plug#end()
 " Gruvbox theme
 colorscheme base16-gruvbox-dark-hard
 hi CursorLineNr guifg=gui04 guibg=gui00
+" Disable italics in comments
+" hi Comment cterm=none gui=none
 hi link LspCxxHlGroupMemberVariable Normal
 set termguicolors
 
