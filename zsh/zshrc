@@ -16,7 +16,7 @@ PROMPT="%F{yellow}%n%f@%F{blue}%m%f %F{green}%1~%f $ "
 # Aliases
 alias ls="ls --color=auto -Fh"
 alias ll="ls -l"
-alias la="ll -a"
+alias la="ll -A"
 alias grep="grep --color=auto"
 
 # Set editor to neovim
