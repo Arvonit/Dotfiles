@@ -85,8 +85,8 @@ function fish_prompt
     echo -n ' $ '
 end
 
-# # Display exit code on right hand side of prompt line
-# # [EXIT_CODE] or [EXIT|CODE]
+# Display exit code on right hand side of prompt line
+# [EXIT_CODE] or [EXIT|CODE]
 function fish_right_prompt
     # Save the return status of the previous command(s)
     set -l last_status $pipestatus
@@ -97,7 +97,7 @@ function fish_right_prompt
     echo -n $status_string
 end
 
-# # Show the full working directory in the title along with the fish command name
+# Show the full working directory in the title along with the fish command name
 function fish_title
     # emacs' "term" is basically the only term that can't handle it.
     if not set -q INSIDE_EMACS; or string match -vq '*,term:*' -- $INSIDE_EMACS
@@ -119,3 +119,12 @@ function fish_title
         end
     end
 end
+
+# Miniconda needed for Tensorflow on Apple Silicon
+# # >>> conda initialize >>>
+# # !! Contents within this block are managed by 'conda init' !!
+# if test -f /Users/arvind/.miniconda/bin/conda
+#     eval /Users/arvind/.miniconda/bin/conda "shell.fish" "hook" $argv | source
+# end
+# # <<< conda initialize <<<
+

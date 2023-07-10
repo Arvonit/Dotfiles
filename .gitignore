@@ -12,3 +12,6 @@ StardewValley
 
 # iTerm has a symlink to its config folder in ~/Library/Application Support :shrug:
 iterm2/AppSupport
+
+# qBittorrent stores its config in ~/.config
+qBittorrent

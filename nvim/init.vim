@@ -17,10 +17,18 @@ call plug#end()
 " Gruvbox theme
 colorscheme base16-gruvbox-dark-hard
 hi CursorLineNr guifg=gui04 guibg=gui00
+set termguicolors
+
 " Disable italics in comments
 hi Comment cterm=none gui=none
 hi link LspCxxHlGroupMemberVariable Normal
-set termguicolors
+
+" Show line numbers
+set number
+
+" Highlight current line number
+set cursorline
+hi cursorline guibg=NONE
 
 " Allow copying from and pasting to OS clipboard
 set clipboard=unnamed
@@ -35,13 +43,6 @@ set ttimeoutlen=5
 
 " Enable mouse support
 set mouse=a
-
-" Show line numbers
-set number
-
-" Highlight current line number
-set cursorline
-hi cursorline guibg=NONE
 
 " Set tab equal to 4 spaces since that's what I use most often
 set expandtab
