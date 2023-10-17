@@ -6,6 +6,8 @@ github-copilot
 op
 fish/fish_variables
 fish/completions
+ghc
+configstore
 
 # Stardew Valley stores its config and save data in ~/.config lol
 StardewValley

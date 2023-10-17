@@ -21,8 +21,11 @@ if status --is-interactive
    eval "$(/opt/homebrew/bin/brew shellenv)"
 end
 
+# Add GHCup to PATH
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME; set -gx PATH $HOME/.cabal/bin $PATH $HOME/.ghcup/bin # ghcup-env
+
 # Add directories to PATH
-fish_add_path -g ~/.local/bin $HOME/.cargo/bin
+fish_add_path -g $HOME/.local/bin $HOME/.cargo/bin $HOME/.cabal/bin
 
 # Enable zoxide
 zoxide init fish | source
@@ -119,12 +122,4 @@ function fish_title
         end
     end
 end
-
-# Miniconda needed for Tensorflow on Apple Silicon
-# # >>> conda initialize >>>
-# # !! Contents within this block are managed by 'conda init' !!
-# if test -f /Users/arvind/.miniconda/bin/conda
-#     eval /Users/arvind/.miniconda/bin/conda "shell.fish" "hook" $argv | source
-# end
-# # <<< conda initialize <<<
 
