@@ -21,11 +21,13 @@ if status --is-interactive
    eval "$(/opt/homebrew/bin/brew shellenv)"
 end
 
-# Add GHCup to PATH
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME; set -gx PATH $HOME/.cabal/bin $PATH $HOME/.ghcup/bin # ghcup-env
+# Set install directories
+set -gx GHCUP_INSTALL_BASE_PREFIX $HOME
+set -gx BUN_INSTALL $HOME/.bun
 
 # Add directories to PATH
-fish_add_path -g $HOME/.local/bin $HOME/.cargo/bin $HOME/.cabal/bin
+fish_add_path -g $HOME/.local/bin $HOME/.cargo/bin $HOME/.cabal/bin $BUN_INSTALL/bin \
+    $GHCUP_INSTALL_BASE_PREFIX/.cabal/bin $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin
 
 # Enable zoxide
 zoxide init fish | source
