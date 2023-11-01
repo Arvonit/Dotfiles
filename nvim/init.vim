@@ -81,6 +81,10 @@ let mapleader = ' '
 " Faster save shortcut (Space + w)
 nmap <leader>w :w<CR>
 
+" Easily paste last yanked text
+nmap <leader>p "0p
+nmap <leader>P "0P
+
 " Disable Ex mode since I never intend to use it
 nmap Q <Nop>
 
