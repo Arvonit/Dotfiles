@@ -11,12 +11,14 @@ abbr --add gst 'git status'
 abbr --add gl 'git log --all --graph --decorate --oneline'
 abbr --add ga 'git add'
 abbr --add unset 'set --erase'
+abbr --add tree 'eza -T'
 
+# Aliases
 alias mv='mv -i'
 alias resource='source ~/.config/fish/config.fish'
 alias chrome="open -a 'Google Chrome'"
 
-# Initialize homebrew environment variables (set homebrew_prefix, add to PATH, etc.)
+# Initialize homebrew environment variables (set HOMEBREW_PREFIX, add to PATH, etc.)
 if status --is-interactive
    eval "$(/opt/homebrew/bin/brew shellenv)"
 end
@@ -27,7 +29,8 @@ set -gx BUN_INSTALL $HOME/.bun
 
 # Add directories to PATH
 fish_add_path -g $HOME/.local/bin $HOME/.cargo/bin $HOME/.cabal/bin $BUN_INSTALL/bin \
-    $GHCUP_INSTALL_BASE_PREFIX/.cabal/bin $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin
+    $GHCUP_INSTALL_BASE_PREFIX/.cabal/bin $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin \
+    $HOME/Library/Python/3.11/bin # for pipenv
 
 # Enable zoxide
 zoxide init fish | source
@@ -38,21 +41,23 @@ set -g fish_prompt_pwd_dir_length 0
 # Disable greeting at startup
 set -g fish_greeting
 
-# Set editor to Neovim
+# Set default editor to Neovim
 set -gx EDITOR nvim
 
 # Set configuration folder to ~/.config
 # This is native to Linux, but some programs follow it on macOS
 set -gx XDG_CONFIG_HOME ~/.config
 
-# Add some useful flags to less
-set -gx LESS '--RAW-CONTROL-CHARS --mouse --ignore-case --tabs=4'
+# Turn on mouse support in less
+# This should include the default flags on macOS
+set -gx LESS '--RAW-CONTROL-CHARS --mouse --ignore-case --tabs=4 --quit-if-one-screen'
 
-# Make GOPATH a hidden folder
+# Turn off "quit if one screen" flag in man pages
+# This is the default behavior on macOS. We need to do this because setting LESS overrides that.
+set -gx MANPAGER 'less -+F'
+
+# Make Go workspace a hidden folder
 set -gx GOPATH ~/.go
-
-# Set default vagrant provider to vmware
-# set -gx VAGRANT_DEFAULT_PROVIDER vmware_desktop
 
 # Custom syntax highlighting colors
 # - Yellow for commands
@@ -61,7 +66,7 @@ set -gx GOPATH ~/.go
 # - Green for quotes
 # - Red for errors
 # To restore defaults, run `unset -g <element>`
-set -g fish_color_autosuggestion 555 brblack
+# set -g fish_color_autosuggestion 555 brblack # default
 set -g fish_color_command yellow
 set -g fish_color_comment brblack
 set -g fish_color_end blue # ; &&
@@ -103,6 +108,7 @@ function fish_right_prompt
 end
 
 # Show the full working directory in the title along with the fish command name
+# Copied from an older version of fish
 function fish_title
     # emacs' "term" is basically the only term that can't handle it.
     if not set -q INSIDE_EMACS; or string match -vq '*,term:*' -- $INSIDE_EMACS
@@ -124,4 +130,3 @@ function fish_title
         end
     end
 end
-
