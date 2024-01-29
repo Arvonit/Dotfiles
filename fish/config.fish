@@ -32,6 +32,13 @@ fish_add_path -g $HOME/.local/bin $HOME/.cargo/bin $HOME/.cabal/bin $BUN_INSTALL
     $GHCUP_INSTALL_BASE_PREFIX/.cabal/bin $GHCUP_INSTALL_BASE_PREFIX/.ghcup/bin \
     $HOME/Library/Python/3.11/bin # for pipenv
 
+# Set configuration folder to ~/.config
+# This is native to Linux, but some programs follow it on macOS
+set -gx XDG_CONFIG_HOME ~/.config
+
+# Make Go workspace a hidden folder
+set -gx GOPATH ~/.go
+
 # Enable zoxide
 zoxide init fish | source
 
@@ -44,20 +51,10 @@ set -g fish_greeting
 # Set default editor to Neovim
 set -gx EDITOR nvim
 
-# Set configuration folder to ~/.config
-# This is native to Linux, but some programs follow it on macOS
-set -gx XDG_CONFIG_HOME ~/.config
-
-# Turn on mouse support in less
-# This should include the default flags on macOS
+# Enable mouse support and case-insensitive search in less, but keep default behavior for macOS
 set -gx LESS '--RAW-CONTROL-CHARS --mouse --ignore-case --tabs=4 --quit-if-one-screen'
-
-# Turn off "quit if one screen" flag in man pages
-# This is the default behavior on macOS. We need to do this because setting LESS overrides that.
-set -gx MANPAGER 'less -+F'
-
-# Make Go workspace a hidden folder
-set -gx GOPATH ~/.go
+set -gx MANPAGER 'less -+F' # Always show short man pages in pager
+set -gx PAGER 'less -FX'
 
 # Custom syntax highlighting colors
 # - Yellow for commands

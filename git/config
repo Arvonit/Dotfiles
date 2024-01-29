@@ -5,7 +5,7 @@
 	signingkey = FBAA205076BAB45B
 [core]
 	autocrlf = input
-    pager = less -FX
+    # pager = less -FX
 [init]
 	defaultBranch = main
 [diff]
